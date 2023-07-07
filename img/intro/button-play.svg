@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="button" clip-path="url(#clip0_131_25)">
+<rect id="surface" width="48" height="48" rx="12" fill="white"/>
+<g id="play">
+<path id="shape" d="M20.4631 29.6799C20.7598 29.6799 21.0168 29.5876 21.353 29.3899L29.2039 24.8416C29.7905 24.4988 30.0608 24.2087 30.0608 23.7473C30.0608 23.2859 29.7905 22.9958 29.2039 22.6531L21.353 18.1047C21.0168 17.9136 20.7598 17.8147 20.4631 17.8147C19.8831 17.8147 19.4414 18.2563 19.4414 18.9814V28.5198C19.4414 29.2383 19.8831 29.6799 20.4631 29.6799Z" fill="black" fill-opacity="0.8"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_131_25">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

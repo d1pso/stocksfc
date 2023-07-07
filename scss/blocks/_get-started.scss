@@ -1,0 +1,123 @@
+.get-started {
+    padding: 120px 0;
+
+    background-color: $color-bg-sec;
+    @media screen and (max-width:810px) {
+        padding: 40px 0;
+  }
+    // .get-started__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 88px;
+        @media screen and (max-width:810px) {
+            align-items: center;
+        }
+    }
+    // .get-started__title
+    &__title { 
+        max-width: 275px;
+        @media screen and (max-width: 1020px) {
+            max-width: 215px;
+        }
+        @media screen and (max-width:810px) {
+            text-align: center;
+        }
+        @include scroll-appearance(0, -100%)
+    }
+    // .get-started__cards
+    &__cards {
+        position: relative;
+
+        display: flex;
+        column-gap: 24px;
+        @media screen and (max-width:1020px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 50px;
+      }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: 340px;
+            width: 280px;
+            height: 280px;
+            background: url('../img/get-started/decor\ -1.png') no-repeat;
+            z-index: 1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -161px;
+            right: -131px;
+            width: 330px;
+            height: 330px;
+            background: url('../img/get-started/decor-2.png') no-repeat;
+            z-index: 1;
+        }
+    }
+    // .get-started__card
+    &__card {
+        position: relative;
+        padding: 96px 86px 36px 40px;
+        max-width: 424px;
+        z-index: 5;
+        @media screen and (max-width:1250px) {
+            padding: 80px 30px 36px 30px;
+        }
+        &:nth-child(1) {
+            @include scroll-appearance(0, -80%);
+            transition: all 1s ease-in-out 0.4s;
+        }
+        &:nth-child(2) {
+            @include scroll-appearance(0, -80%);
+            transition: all 1s ease-in-out 0.6s;
+        }
+        &:nth-child(3) {
+            @include scroll-appearance(0, -80%);
+            transition: all 1s ease-in-out 0.8s;
+        }
+    }
+}
+.card-get-started {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 24px;
+    border: 1px solid rgba(245, 247, 250, 0.06);
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.06) 0%, rgba(245, 247, 250, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(9, 13, 20, 0.12), -2px -2px 4px 0px rgba(224, 224, 255, 0.02), 0px 1px 2px 0px rgba(9, 13, 20, 0.24);
+    backdrop-filter: blur(54.36563491821289px);
+    // .card-get-started__icon
+    &__icon {
+        position: absolute;
+        top: -40px;
+        left: 40px;
+        @media screen and (max-width:1020px) {
+            width: 90px;
+            height: 95px;
+        }
+    }
+    // .card-get-started__title
+    &__title {
+        max-width: 250px;
+        margin: 0 0 24px 0;
+
+        font-family: $font-second;
+        font-size: 1.5rem;
+        font-weight: 1000;
+        line-height: 1.16; /* 28/24 */
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    // .card-get-started__text
+    &__text {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.75; /* 28/16 */
+        @media screen and (max-width:1250px) {
+            font-size: 0.825rem;
+      }
+    }
+}

@@ -1,0 +1,15 @@
+// BASE
+@import "./base/roots";
+@import "./base/base";
+@import "./base/reset";
+
+// BLOCKS
+@import './blocks/header';
+@import './blocks/intro';
+@import './blocks/platform';
+@import './blocks/services';
+@import './blocks/get-started';
+@import './blocks/rewards';
+@import './blocks/questions';
+@import './blocks/call-to-action';
+@import './blocks/footer';

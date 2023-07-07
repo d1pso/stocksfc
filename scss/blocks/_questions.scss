@@ -1,0 +1,155 @@
+.questions {
+      padding: 120px 0;
+
+      background-color: $color-bg-sec;
+      @media screen and (max-width:810px) {
+            padding: 40px 0;
+      }
+      // .questions__container
+      &__container {
+            position: relative;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            @media screen and (max-width:810px) {
+                  flex-direction: column;
+                  align-items: center;
+                  row-gap: 20px;
+            }
+            &::before {
+                  content: '';
+                  position: absolute;
+                  bottom: -180px;
+                  left: 404px;
+                  width: 320px;
+                  height: 320px;
+                  background: url('../img/questions/dec-2.png') no-repeat;
+            }
+            &::after {
+                  content: '';
+                  position: absolute;
+                  top: 79px;
+                  left: 210px;
+                  width: 200px;
+                  height: 200px;
+                  background: url('../img/questions/dec-1.png') no-repeat;
+            }
+      }
+      // .questions__title
+      &__title {
+            position: relative;
+            max-width: 380px;
+            z-index: 5;
+            @media screen and (max-width:810px) {
+                  max-width: 280px;
+            }
+            @include scroll-appearance(-100%, 0);
+      }
+      // .questions__accordion
+      &__accordion {
+            position: relative;
+            z-index: 10;
+            max-width: 760px;
+      }
+}
+.accordion {
+      padding: 32px;
+
+      border-radius: 16px;
+      border: 1px solid rgba(245, 247, 250, 0.06);
+      background: linear-gradient(135deg, rgba(245, 247, 250, 0.06) 0%, rgba(245, 247, 250, 0.00) 100%);
+      box-shadow: 0px 4px 4px 0px rgba(9, 13, 20, 0.12), -2px -2px 4px 0px rgba(224, 224, 255, 0.02), 0px 1px 2px 0px rgba(9, 13, 20, 0.24);
+      backdrop-filter: blur(54.36563491821289px);
+      &:nth-child(1) {
+            @include scroll-appearance(100%, 0);
+            transition: all 1s ease-in-out 0s;
+      }
+      &:nth-child(2) {
+            @include scroll-appearance(100%, 0);
+            transition: all 1s ease-in-out 0.2s;
+      }
+      &:nth-child(3) {
+            @include scroll-appearance(100%, 0);
+            transition: all 1s ease-in-out 0.4s;
+      }
+      &:nth-child(4) {
+            @include scroll-appearance(100%, 0);
+            transition: all 1s ease-in-out 0.6s;
+      }
+      // .accordion__list
+      &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+      }
+      // .accordion__control
+      &__control {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+      }
+      // .accordion__title
+      &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.4px;
+      }
+      // .accordion__icon
+      &__icon {
+            position: relative;
+
+            width: 24px;
+            height: 24px;
+            &::before {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  left: 0;
+                  width: 80%;
+                  height: 10%;
+                  background-color: $color-white;
+            }
+            &::after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%) rotate(90deg);
+                  transition: all .2s ease-in;
+                  left: 0;
+                  width: 80%;
+                  height: 10%;
+                  opacity: 1;
+                  background-color: $color-white;
+            }
+            &--active::after {
+                  transform: rotate(-180deg);
+                  opacity: 0;
+            }
+      }
+      // .accordion__content
+      &__content {
+            box-sizing: content-box;
+            padding: 0 0 0 0;
+            max-height: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.75; /* 28/16 */
+
+            transition: all .2s ease-in;
+
+            opacity: 0;
+            visibility: hidden;
+            &--active {
+                  padding: 16px 0 0 0;
+                  opacity: 1;
+                  visibility: visible;
+
+            }
+      }
+
+}
